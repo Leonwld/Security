@@ -1,3 +1,5 @@
+package com.dario.test;
+
 import junit.framework.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,16 +12,16 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import service.UserService;
+import com.dario.service.UserService;
 
 /**
  * Created with IntelliJ IDEA.
  * User: faith
- * Date: 13-6-24
+ * Date: 16-3-14
  * Time: 上午11:22
  * To change this template use File | Settings | File Templates.
  */
-@ContextConfiguration(locations = {"classpath*:app-servlet.xml","classpath*:applicationContext-security.xml"})
+@ContextConfiguration(locations = {"classpath:app-servlet.xml","classpath:applicationContext-security.xml"})
 @RunWith(SpringJUnit4ClassRunner.class)
 public class UserServiceTest {
     private Authentication admin = new UsernamePasswordAuthenticationToken("test", "xxx", AuthorityUtils.createAuthorityList("ROLE_ADMIN"));

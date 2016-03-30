@@ -1,6 +1,5 @@
-package impl;
+package com.dario.service;
 
-import service.UserService;
 import org.springframework.stereotype.Service;
 
 /**
